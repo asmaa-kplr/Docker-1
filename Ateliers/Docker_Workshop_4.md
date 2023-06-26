@@ -169,6 +169,34 @@ Voici ce que cela signifie :
 * **data: :** Cela définit un volume nommé "data".
   
 En utilisant cette configuration, Docker va créer un volume nommé "data" qui peut être utilisé par les services définis dans votre fichier Docker Compose.
+
+```
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - data:/var/lib/postgresql/data
+
+  pg-admin:
+    image: dpage/pgadmin4:7
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@email.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+      - PGADMIN_LISTEN_PORT=5050
+
+    ports:
+      - "5050:5050"
+
+volumes:
+  data:
+```
   
 ## 13.Executer les services définis dans le fichier Docker Compose 
   
