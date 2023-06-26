@@ -20,10 +20,10 @@ Etapes pour création et utilisation de [Gitpod](https://github.com/kplr-trainin
 ## 1. Télécharger l'image Docker de PostgreSQL a partir du [Docker-Hub](https://hub.docker.com/_/postgres)
 
 ```
-$ docker pull postgres 
+$ docker ******* postgres 
 ```
 
-La commande `docker pull postgres` est utilisée pour télécharger l'image Docker de PostgreSQL à partir du référentiel Docker Hub. Voici un exemple de résultat d'exécution :
+La commande `docker ******* postgres` est utilisée pour télécharger l'image Docker de PostgreSQL à partir du référentiel Docker Hub. Voici un exemple de résultat d'exécution :
 
 ```
 Using default tag: latest
@@ -52,10 +52,10 @@ Cet exemple montre la sortie typique lors du téléchargement de l'image Postgre
 ## 2. Vérifier les images Docker installées
 
 ```
-$ docker images 
+$ docker *******
 ```
 
-La commande `docker images` permet de lister les images Docker disponibles sur votre machine. Vous pouvez l'utiliser pour vérifier si l'image PostgreSQL a été téléchargée avec succès. Voici un exemple de résultat qui inclut l'image PostgreSQL :
+La commande `docker *******` permet de lister les images Docker disponibles sur votre machine. Vous pouvez l'utiliser pour vérifier si l'image PostgreSQL a été téléchargée avec succès. Voici un exemple de résultat qui inclut l'image PostgreSQL :
 
 ```
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
@@ -79,7 +79,7 @@ Si vous voyez une entrée similaire dans le résultat de la commande `docker ima
 La commande suivante permet de créer et d'exécuter un conteneur Docker basé sur l'image PostgreSQL :
 
 ```
-$ docker run --name postgres_cont -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres
+$ docker ******* --name postgres_cont -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres
 ```
 
 Explications :
@@ -105,10 +105,10 @@ Une fois que le conteneur est en cours d'exécution, vous pouvez utiliser des co
 ## 4. Afficher les conteneurs en cours 
 
 ```
-$ docker pull ps
+$ docker *******
 ```
 
-La commande `docker ps` permet d'afficher la liste des conteneurs en cours d'exécution sur votre machine. Utilisez-la pour afficher le conteneur PostgreSQL que vous avez créé. Voici un exemple de résultat :
+La commande `docker *******` permet d'afficher la liste des conteneurs en cours d'exécution sur votre machine. Utilisez-la pour afficher le conteneur PostgreSQL que vous avez créé. Voici un exemple de résultat :
 
 ```
 CONTAINER ID   IMAGE     COMMAND                 CREATED         STATUS         PORTS                    NAMES
@@ -127,19 +127,19 @@ Explications :
 
 Dans cet exemple, vous pouvez voir l'entrée pour le conteneur `postgres_cont`, qui est basé sur l'image PostgreSQL. Le conteneur est en cours d'exécution depuis environ 5 minutes et le port 5432 du conteneur est mappé sur le port 5432 de l'hôte.
 
-Si vous voyez une entrée similaire dans le résultat de la commande `docker ps`, cela signifie que le conteneur PostgreSQL que vous avez créé est en cours d'exécution.
+Si vous voyez une entrée similaire dans le résultat de la commande `docker *******`, cela signifie que le conteneur PostgreSQL que vous avez créé est en cours d'exécution.
 
 ## 5. Exécuter une session interactive de shell 
 
-La commande suivante permet d'exécuter une session interactive de terminal à l'intérieur du conteneur PostgreSQL en utilisant la commande `docker exec` :
+La commande suivante permet d'exécuter une session interactive de terminal à l'intérieur du conteneur PostgreSQL en utilisant la commande `docker  *******` :
 
 ```
-$ docker exec -it <ID_conteneur> bash
+$ docker ******* <ID_conteneur> *******
 ```
 
 Explications :
 
-- `docker exec` est utilisé pour exécuter une commande à l'intérieur d'un conteneur en cours d'exécution.
+- `docker  *******` est utilisé pour exécuter une commande à l'intérieur d'un conteneur en cours d'exécution.
 - `-it` permet d'ouvrir une session interactive de terminal.
 - `<ID_conteneur>` est l'identifiant unique du conteneur dans lequel vous souhaitez exécuter la commande.
 - `bash` est la commande qui sera exécutée dans le conteneur. Cela ouvrira un shell Bash à l'intérieur du conteneur.
@@ -148,7 +148,7 @@ Après avoir exécuté cette commande, vous serez placé à l'intérieur du cont
 
 Assurez-vous d'utiliser l'identifiant correct du conteneur que vous souhaitez accéder.
 
-Après avoir exécuté la commande `docker exec -it 088de32b0e5c bash`, vous serez placé à l'intérieur du conteneur PostgreSQL dans une session de terminal interactive. Voici un exemple de résultat :
+Après avoir exécuté la commande `docker  ******* 088de32b0e5c  *******`, vous serez placé à l'intérieur du conteneur PostgreSQL dans une session de terminal interactive. Voici un exemple de résultat :
 
 ```
 root@088de32b0e5c:/#
@@ -211,10 +211,10 @@ En exécutant cette commande, vous quitterez le shell Bash du conteneur et revie
 ## 10. Afficher les conteneurs en cours 
 
 ```
-$ docker pull ps
+$ docker  *******
 ```
 
-Après avoir quitté le shell Bash à l'intérieur du conteneur à l'aide de la commande `exit`, vous pouvez utiliser la commande `docker ps` pour afficher la liste des conteneurs en cours d'exécution sur votre machine. Voici un exemple de résultat :
+Après avoir quitté le shell Bash à l'intérieur du conteneur à l'aide de la commande `exit`, vous pouvez utiliser la commande `docker  *******` pour afficher la liste des conteneurs en cours d'exécution sur votre machine. Voici un exemple de résultat :
 
 ```
 CONTAINER ID   IMAGE     COMMAND                 CREATED         STATUS         PORTS                    NAMES
@@ -223,14 +223,14 @@ CONTAINER ID   IMAGE     COMMAND                 CREATED         STATUS         
 
 Dans cet exemple, vous pouvez voir une entrée pour le conteneur `postgres_cont`, basé sur l'image PostgreSQL, qui est toujours en cours d'exécution. Le statut du conteneur est "Up" avec le port 5432 du conteneur mappé sur le port 5432 de l'hôte.
 
-Si vous voyez une entrée similaire dans le résultat de la commande `docker ps`, cela signifie que le conteneur PostgreSQL que vous avez créé est toujours en cours d'exécution même après avoir quitté le shell Bash à l'intérieur du conteneur.
+Si vous voyez une entrée similaire dans le résultat de la commande `docker  *******`, cela signifie que le conteneur PostgreSQL que vous avez créé est toujours en cours d'exécution même après avoir quitté le shell Bash à l'intérieur du conteneur.
 
 ## 11. Arreter le conteneur de l'image postgres
 
 Pour arrêter un conteneur Docker, vous pouvez utiliser la commande `docker stop` suivie de l'identifiant du conteneur. Voici la commande pour arrêter le conteneur PostgreSQL :
 
 ```
-docker stop <ID_conteneur>
+docker  ******* <ID_conteneur>
 ```
 
 Après avoir exécuté cette commande, le conteneur PostgreSQL correspondant à l'identifiant `<ID_conteneur>` sera arrêté.
@@ -238,7 +238,7 @@ Après avoir exécuté cette commande, le conteneur PostgreSQL correspondant à 
 ## 12. Supprimer l'image postgres
 
 ```
-$ docker rmi postgres
+$ docker c9b476b1c417 postgres
 ```
 
 Si vous essayez de supprimer une image Docker de Postgres avant de supprimer le conteneur associé, l'erreur qui peut s'afficher dépendra de la situation spécifique. Voici l'erreur courante à laquelle vous pourriez être confronté :
@@ -254,10 +254,10 @@ Si vous essayez de supprimer une image Docker de Postgres avant de supprimer le 
 ## 13. Supprimer le conteneur
 
 ```
-$ docker rm <ID_conteneur>
+$ docker ***** <ID_conteneur>
 ```
 
-Lorsque vous exécutez la commande `docker rm container_ID` pour supprimer un conteneur Docker spécifique, le résultat affiché dépendra du succès ou de l'échec de l'opération  :
+Lorsque vous exécutez la commande `docker ***** container_ID` pour supprimer un conteneur Docker spécifique, le résultat affiché dépendra du succès ou de l'échec de l'opération  :
 
 Si la suppression du conteneur est réussie, vous verrez simplement l'ID du conteneur supprimé :
 
@@ -271,10 +271,10 @@ Assurez-vous de remplacer "container_ID" par l'ID réel du conteneur que vous so
 ## 14. Afficher les conteneurs
 
 ```
-$ docker ps -a
+$ docker *****
 ```
 
-Si vous souhaitez afficher la liste des conteneurs Docker présents sur votre système et vérifier qu'aucun conteneur n'est en cours d'exécution, vous pouvez utiliser la commande `docker ps -a`. Voici le résultat que vous pourriez obtenir lorsque vous n'avez aucun conteneur en cours d'exécution :
+Si vous souhaitez afficher la liste des conteneurs Docker présents sur votre système et vérifier qu'aucun conteneur n'est en cours d'exécution, vous pouvez utiliser la commande `docker *****`. Voici le résultat que vous pourriez obtenir lorsque vous n'avez aucun conteneur en cours d'exécution :
 
 ```
 CONTAINER ID   IMAGE    COMMAND   CREATED   STATUS    PORTS   NAMES
@@ -287,7 +287,7 @@ Notez que la colonne "STATUS" sera vide pour tous les conteneurs, puisqu'aucun n
 ## 15. Supprimer l'image postgres 
 
 ```
-$ docker rmi postgres
+$ docker ***** postgres
 ```
 
 Pour supprimer une image Docker de Postgres, vous pouvez utiliser la commande `docker rmi image_nom`, où "image_ID" correspond à l'ID ou au nom de l'image que vous souhaitez supprimer. Voici le résultat que vous pourriez obtenir lors de la suppression de l'image Postgres :
@@ -303,10 +303,10 @@ Dans ce cas, les messages indiquent que l'image a été supprimée avec succès.
 ## 16. Afficher les images 
 
 ```
-$ docker images 
+$ docker *****
 ```
 
-Pour  afficher la liste des images Docker présentes sur votre système après avoir supprimé l'image Postgres, vous pouvez utiliser la commande `docker images`. Voici le résultat que vous obtiendrez lorsque vous n'avez aucune image :
+Pour  afficher la liste des images Docker présentes sur votre système après avoir supprimé l'image Postgres, vous pouvez utiliser la commande `docker *****`. Voici le résultat que vous obtiendrez lorsque vous n'avez aucune image :
 
 ```
 REPOSITORY   TAG    IMAGE ID   CREATED   SIZE
