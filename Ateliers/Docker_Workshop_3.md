@@ -131,21 +131,34 @@ CMD ["flask", "run", "--host=0.0.0.0"]
 Pour construire l'image Docker on executera la commande suivante : 
 
 ```
-$ docker image build -t flask-docker .
+$ docker image ******** -t flask-docker .
 ```
+
+La commande "docker image ******** -t flask-docker ." est utilisée pour construire une image Docker à partir d'un fichier de configuration appelé Dockerfile et lui attribuer un tag ou un nom d'image spécifique.
+
+Voici une explication détaillée de chaque composant de la commande :
+
+- "docker image ********" est la commande principale pour construire une image Docker. Elle indique à Docker de lire les instructions fournies dans le Dockerfile et de créer une image à partir de ces instructions.
+
+- "-t flask-docker" spécifie le tag ou le nom d'image que vous souhaitez attribuer à l'image Docker en cours de construction. Dans cet exemple, l'image sera nommée "flask-docker". Le tag est utile pour identifier et référencer facilement une image spécifique.
+
+- "." spécifie le chemin du contexte de construction. Le contexte est le répertoire qui contient le Dockerfile et les fichiers auxiliaires nécessaires à la construction de l'image. Dans ce cas, le point (.) indique que le Dockerfile se trouve dans le répertoire courant.
+
+En résumé, cette commande permet de construire une image Docker à partir des instructions fournies dans le Dockerfile se trouvant dans le répertoire courant, et de lui attribuer le nom "flask-docker".
 
 ## 8 . Affihcer les images Docker
 
 Une fois que l'image est construite avec succès, celle-ci doit figurer dans la liste des images Docker avec la commande :
+
 ```
-$ docker images
+$ docker ********
 ```
 
 ## 9 . Exécution de l'image Docker
 
 Après avoir réussi à construire l’image, l’étape suivante consiste à exécuter une instance de l’image. Voici comment effectuer cette opération : 
 ```
-$ docker run -p 5000:5000 flask-docker
+$ docker ******** -p 5000:5000 flask-docker
 ```
 Cette commande exécute le conteneur et son application intégrée, chacun sur le port 5000 en utilisant une approche de liaison de port. Le premier 5000 est le port que nous allouons au conteneur sur notre machine. Le second 5000 est le port sur lequel l’application sera exécutée sur le conteneur.
 
@@ -183,12 +196,12 @@ Dans cet exemple, vous pouvez voir deux images : "flask-docker" avec la balise "
 
 ## 12 . Se connecter à Docker Hub
 
-La commande `docker login` est utilisée pour se connecter à Docker Hub ou à un autre registre Docker. Voici les étapes pour effectuer une connexion à Docker Hub :
+La commande `docker ********` est utilisée pour se connecter à Docker Hub ou à un autre registre Docker. Voici les étapes pour effectuer une connexion à Docker Hub :
 
 Exécutez la commande suivante :
 
 ```
-$ docker login
+$ docker ********
 ```
 Vous serez invité à saisir votre nom d'utilisateur Docker Hub. Entrez votre nom d'utilisateur et appuyez sur Entrée.
 
@@ -200,14 +213,14 @@ Une fois que vous êtes connecté, vous pouvez effectuer des opérations telles 
 
 ## 13 . Pousser l'image Docker vers Docker Hub 
 
-Maintenant, vous pouvez pousser (push) l'image "kplrtraining/docker_workshop3:latest" vers Docker Hub en utilisant la commande `docker push` :
+Maintenant, vous pouvez pousser (push) l'image "mon_nom_utilisateur/flask-docker:latest" vers Docker Hub en utilisant la commande `docker ********` :
 
 ```
-$ docker push mon_nom_utilisateur/flask-docker:latest
+$ docker ******** mon_nom_utilisateur/flask-docker:latest
 ```
 
-Cela rendra votre image disponible sur Docker Hub sous le nom "kplrtraining/docker_workshop3" pour être utilisée par d'autres utilisateurs.
-Pousser l'image taguée vers Docker Hub avec la commande "docker push".
+Cela rendra votre image disponible sur Docker Hub sous le nom "mon_nom_utilisateur/flask-docker:latest" pour être utilisée par d'autres utilisateurs.
+Pousser l'image taguée vers Docker Hub avec la commande "docker ********".
 
 ## 14 . Vérifier la présence de l'image sur [Docker Hub](https://hub.docker.com/)
 
